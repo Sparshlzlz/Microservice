@@ -6,7 +6,7 @@ pipeline {
             steps {
                 script {
                     withDockerRegistry(credentialsId: 'docker-cred', toolName: 'docker') {
-                        sh "docker build -t sparsh/emailservice:latest ."
+                        sh "docker build -t sparshlzlz/emailservice:latest ."
                     }
                 }
             }
@@ -16,7 +16,7 @@ pipeline {
             steps {
                 script {
                     withDockerRegistry(credentialsId: 'docker-cred', toolName: 'docker') {
-                        sh "docker push sparsh/emailservice:latest "
+                        sh "docker push sparshlzlz/emailservice:latest "
                     }
                 }
             }
