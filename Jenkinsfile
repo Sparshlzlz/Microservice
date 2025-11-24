@@ -6,7 +6,7 @@ pipeline {
             steps {
                 script {
                     withDockerRegistry(credentialsId: 'docker-cred', toolName: 'docker') {
-                        sh "docker build -t sparsh/recommendationservice:latest ."
+                        sh "docker build -t sparshlzlz/recommendationservice:latest ."
                     }
                 }
             }
@@ -16,7 +16,7 @@ pipeline {
             steps {
                 script {
                     withDockerRegistry(credentialsId: 'docker-cred', toolName: 'docker') {
-                        sh "docker push sparsh/recommendationservice:latest "
+                        sh "docker push sparshlzlz/recommendationservice:latest "
                     }
                 }
             }
