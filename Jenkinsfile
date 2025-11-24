@@ -8,7 +8,7 @@ pipeline {
                     dir('src') {
 
                     withDockerRegistry(credentialsId: 'docker-cred', toolName: 'docker') {
-                        sh "docker build -t sparsh/cartservice:latest ."
+                        sh "docker build -t sparshlzlz/cartservice:latest ."
                     }
                         }
                 }
@@ -19,7 +19,7 @@ pipeline {
             steps {
                 script {
                     withDockerRegistry(credentialsId: 'docker-cred', toolName: 'docker') {
-                        sh "docker push sparsh/cartservice:latest "
+                        sh "docker push sparshlzlz/cartservice:latest "
                     }
                 }
             }
